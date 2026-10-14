@@ -1,0 +1,16 @@
+{
+  "name": "@starfire/game-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p ../tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@fastify/cors": "^10.0.2",
+    "@types/three": "^0.184.1",
+    "fastify": "^5.3.3",
+    "three": "^0.184.0",
+    "vitest": "^3.2.4"
+  }
+}

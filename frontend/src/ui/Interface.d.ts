@@ -1,0 +1,30 @@
+import type { Game } from '../game/Game.js';
+export declare class Interface {
+    private readonly game;
+    private readonly menu;
+    private readonly pause;
+    private readonly result;
+    private readonly leaderboard;
+    private readonly hud;
+    private readonly bossBar;
+    private readonly score;
+    private readonly wave;
+    private readonly health;
+    private readonly bossFill;
+    private readonly finalScore;
+    private readonly submitStatus;
+    private readonly submitButton;
+    private readonly scoreForm;
+    private readonly leaderboardContent;
+    private unsubscribe;
+    private submitted;
+    private currentScore;
+    private lastState;
+    constructor(game: Game);
+    dispose(): void;
+    private update;
+    private sendScore;
+    private showLeaderboard;
+    private hideLeaderboard;
+    private hideAllExcept;
+}

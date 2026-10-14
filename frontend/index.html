@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070d1c" />
+    <meta name="description" content="Starfire Squadron — tembus badai nebula dan bekukan ancaman Vanta." />
+    <title>Starfire Squadron — Pertahanan Nebula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="masthead"><span class="brand"><i class="brand-mark"></i> STARFIRE <b>SQUADRON</b></span><span class="sector">SEKTOR 07 <i>///</i> PERTAHANAN NEBULA</span></header>
+      <main class="flight-deck">
+        <section id="game-frame" class="game-frame" aria-label="Permainan Starfire Squadron">
+          <div id="scene" class="scene" aria-label="Area permainan tiga dimensi"></div>
+          <div class="frame-grain"></div>
+          <div class="scanline"></div>
+          <div class="edge-label edge-label-left">ARSIP MISI 07-A <span>·</span> BATAS ORBIT RENDAH</div>
+          <div class="edge-label edge-label-right">SINYAL <span class="signal-dot"></span> AKTIF</div>
+          <div id="hud" class="hud hidden" aria-live="polite">
+            <div class="hud-top"><div class="hud-block"><span class="hud-label">SKOR</span><strong id="score-value">000000</strong></div><div class="hud-block hud-center"><span class="hud-label">OPERASI</span><strong id="wave-value">SIAP</strong></div><div class="hud-block hud-right"><span class="hud-label">KONDISI KAPAL</span><strong id="health-value">♥ ♥ ♥</strong></div></div>
+            <div class="boss-bar hidden" id="boss-bar"><div class="boss-name">VANTA <span>· KAPAL INDUK</span></div><div class="bar-track"><i id="boss-fill"></i></div></div>
+            <div class="hud-bottom"><span><i class="live-dot"></i> <span id="status-value">TERHUBUNG</span></span><span class="hud-coordinates">N 38° 12′ <b>///</b> S 02° 51′</span></div>
+          </div>
+          <section id="overlay-menu" class="overlay overlay-menu">
+            <div class="menu-copy"><span class="eyebrow"><i></i> ARMADA PERLAWANAN · MISI 07</span><h1>STARFIRE<br /><em>SQUADRON</em></h1><p class="tagline">Langit terakhir bukan milik mereka.</p><div class="menu-rule"><span></span> BRIEFING MISI <span></span></div><p class="mission-copy">Armada Vanta menerobos Sabuk Nebula. Jadilah perisai terakhir sebelum planet Nara jatuh dalam gelap.</p>
+              <button id="start-button" class="action-button" type="button"><span>MULAI MISI</span><b>→</b></button>
+              <button id="leaderboard-button" class="text-button" type="button"><span>♧</span> PAPAN PERINGKAT</button>
+              <div class="controls-hint"><span class="keycaps"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><span>GERAK</span><i></i><kbd class="wide-key">SPASI</kbd><span>TEMBAK</span><i></i><kbd class="wide-key">ESC</kbd><span>JEDA</span></div>
+            </div>
+            <div class="menu-stamp"><div class="stamp-star">✳</div><span>ARMADA<br />NARA</span><small>EST. 2189</small></div>
+            <div class="decor-index">07 <span>/</span> 12</div>
+          </section>
+          <section id="overlay-pause" class="overlay overlay-center hidden"><span class="eyebrow"><i></i> KONTROL MISI</span><h2>MISI <em>DIJEDA</em></h2><p>Tarik napas, pilot. Langit menunggu.</p><button id="resume-button" class="action-button" type="button"><span>LANJUTKAN MISI</span><b>→</b></button><p class="pause-hint">Tekan <kbd>ESC</kbd> untuk kembali ke pertempuran</p></section>
+          <section id="overlay-result" class="overlay overlay-center hidden"><span id="result-kicker" class="eyebrow"><i></i> LAPORAN MISI</span><h2 id="result-title">LANGIT <em>TERSAMATKAN</em></h2><p id="result-copy">Gelombang Vanta berhasil dihalau.</p><div class="result-score-label">TOTAL SKOR <strong id="final-score">000000</strong></div><form id="score-form" class="score-form"><label for="pilot-name">NAMA PILOT <span>(maks. 20 karakter)</span></label><div class="score-submit"><input id="pilot-name" name="name" type="text" maxlength="20" minlength="1" autocomplete="nickname" placeholder="TULIS NAMAMU" required /><button type="submit" id="submit-score" class="submit-button">KIRIM <b>→</b></button></div></form><p id="submit-status" class="submit-status" aria-live="polite"></p><div class="result-actions"><button id="replay-button" class="action-button" type="button"><span>MAIN LAGI</span><b>↻</b></button><button id="results-leaderboard-button" class="text-button" type="button">PAPAN PERINGKAT</button></div></section>
+          <section id="overlay-leaderboard" class="overlay overlay-center hidden"><span class="eyebrow"><i></i> CATATAN PILOT</span><h2>PAPAN <em>PERINGKAT</em></h2><div id="leaderboard-content" class="leaderboard-content"><p>Memuat hasil transmisi...</p></div><button id="close-leaderboard" class="text-button" type="button">← KEMBALI</button></section>
+        </section>
+        <footer class="deck-footer"><div class="footer-left"><span class="footer-bars">▥▥▥</span> SISTEM PERTAHANAN <b>ONLINE</b></div><div class="footer-center"><span></span> PAKET SIAP <span></span></div><div class="footer-right">TEKAN <kbd>SPASI</kbd> UNTUK MENYELAMATKAN NARA</div></footer>
+      </main>
+      <footer class="site-footer"><span>STARFIRE SQUADRON <i>©</i> 2189 ARMADA NARA</span><span>BUATAN DENGAN KEBERANIAN <b>✳</b></span></footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

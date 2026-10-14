@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["ES2022"], "module": "NodeNext", "moduleResolution": "NodeNext", "strict": true,
+    "noUnusedLocals": true, "noUnusedParameters": true, "noFallthroughCasesInSwitch": true, "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true, "skipLibCheck": true, "composite": true, "outDir": "dist", "rootDir": "src",
+    "tsBuildInfoFile": "../node_modules/.tmp/backend.tsbuildinfo",
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"]
+}
